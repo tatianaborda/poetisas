@@ -44,10 +44,8 @@ DB_NAME=poetisas
 DB_USER=root
 DB_PASS=tu_contraseña
 DB_HOST=localhost
-DB_PORT=3306
 DB_DIALECT=mysql
-
-PORT=3000
+PORT=3006
 ```
 
 4. Instalá las dependencias:
