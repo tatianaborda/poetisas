@@ -68,7 +68,6 @@ node src/app.js
 |--------|-------------------|---------------------------------|
 | GET    | `/poemas`         | Trae todos los poemas           |
 | GET    | `/poemas/:id`     | Trae un poema por su ID         |
-| GET    | `/poemas-random`  | Devuelve un poema aleatorio     |
 | POST   | `/poemas`         | Crea un nuevo poema             |
 | PUT    | `/poemas/:id`     | Actualiza un poema existente    |
 | DELETE | `/poemas/:id`     | Elimina un poema por ID         |
