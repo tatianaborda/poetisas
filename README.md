@@ -1,81 +1,70 @@
-# 📚 API de Poemas de Poetisas Latinoamericanas
-
-Una API RESTful desarrollada con **Node.js**, **Express**, **Sequelize** y **MySQL**, que permite consultar, crear, editar y eliminar poemas completos escritos por poetisas de América Latina. Ideal para usar como base educativa o cultural. ❤️
-
----
-
-## 🚀 Tecnologías utilizadas
-
-- [Node.js](https://nodejs.org/) – entorno de ejecución JavaScript
-- [Express](https://expressjs.com/) – framework web para Node
-- [Sequelize](https://sequelize.org/) – ORM para bases de datos SQL
-- [MySQL](https://www.mysql.com/) – sistema de gestión de bases de datos
-- [MySQL Workbench](https://www.mysql.com/products/workbench/) – herramienta gráfica para crear y administrar la base
-- [dotenv](https://www.npmjs.com/package/dotenv) – manejo de variables de entorno
+# 📚 Latin American Women Poets API
+A RESTful API developed with **Node.js**, **Express**, **Sequelize**, and **MySQL**, that allows you to query, create, edit, and delete complete poems written by women poets from Latin America. Ideal for educational or cultural purposes. ❤️
 
 ---
 
-## 📁 Estructura del proyecto
+## 🚀 Technologies Used
+- [Node.js](https://nodejs.org/) – JavaScript runtime environment
+- [Express](https://expressjs.com/) – web framework for Node.js
+- [Sequelize](https://sequelize.org/) – ORM for SQL databases
+- [MySQL](https://www.mysql.com/) – database management system
+- [MySQL Workbench](https://www.mysql.com/products/workbench/) – graphical tool for creating and managing databases
+- [dotenv](https://www.npmjs.com/package/dotenv) – environment variable management
 
+---
+
+## 📁 Project Structure
 ```
 poetisas-db/
 ├── src/
-│   ├── models/             # Modelo Sequelize (Poema.js)
+│   ├── models/             # Sequelize model (Poema.js)
 │   ├── routes/
-│   │   ├── poemas/         # Rutas CRUD separadas por acción
-│   │   └── index.js        # Enrutador principal
-│   ├── database.js         # Conexión a MySQL con Sequelize
-│   └── app.js              # Servidor Express
-├── .env                    # Variables de entorno (no subir a GitHub)
-├── package.json            # Dependencias del proyecto
-└── README.md               # Documentación
+│   │   ├── poemas/         # CRUD routes separated by action
+│   │   └── index.js        # Main router
+│   ├── database.js         # MySQL connection with Sequelize
+│   └── app.js              # Express server
+├── .env                    # Environment variables (do not commit to GitHub)
+├── package.json            # Project dependencies
+└── README.md               # Documentation
 ```
 
 ---
 
-## 🔌 Configuración inicial
-
-1. Cloná este repositorio  
-2. Asegurate de tener **MySQL corriendo** y haber creado la base `poetisas` con la tabla `Poemas`  
-3. Crear un archivo `.env` en la raíz del proyecto con tus datos de conexión:
-
+## 🔌 Initial Setup
+1. Clone this repository  
+2. Make sure you have **MySQL running** and have created the `poetisas` database with the `Poemas` table  
+3. Create a `.env` file in the project root with your connection credentials:
 ```env
 DB_NAME=poetisas
 DB_USER=root
-DB_PASS=tu_contraseña
+DB_PASS=your_password
 DB_HOST=localhost
 DB_DIALECT=mysql
 PORT=3006
 ```
-
-4. Instalá las dependencias:
-
+4. Install dependencies:
 ```bash
 npm install
 ```
-
-5. Iniciá el servidor:
-
+5. Start the server:
 ```bash
 node src/app.js
 ```
 
 ---
 
-## 📖 Endpoints disponibles
-
-| Método | Ruta              | Descripción                     |
+## 📖 Available Endpoints
+| Method | Route              | Description                     |
 |--------|-------------------|---------------------------------|
-| GET    | `/poemas`         | Trae todos los poemas           |
-| GET    | `/poemas/:id`     | Trae un poema por su ID         |
-| POST   | `/poemas`         | Crea un nuevo poema             |
-| PUT    | `/poemas/:id`     | Actualiza un poema existente    |
-| DELETE | `/poemas/:id`     | Elimina un poema por ID         |
+| GET    | `/poemas`         | Retrieve all poems              |
+| GET    | `/poemas/:id`     | Retrieve a poem by ID           |
+| POST   | `/poemas`         | Create a new poem               |
+| PUT    | `/poemas/:id`     | Update an existing poem         |
+| DELETE | `/poemas/:id`     | Delete a poem by ID             |
 
 ---
 
-## 🧪 Ejemplo de `POST /poemas`
-
+## 🧪 Example `POST /poemas` Request
 ```json
 {
   "titulo": "Canto a la vida",
@@ -88,22 +77,19 @@ node src/app.js
 
 ---
 
-## 🎥 Proyecto explicado en mi canal de YouTube
-
-Este proyecto fue creado paso a paso en mi canal, donde enseño programación, APIs y desarrollo web con ejemplos reales y creativos.  
+## 🎥 Project Explained on My YouTube Channel
+This project was created step by step on my channel, where I teach programming, APIs, and web development with real and creative examples.  
 👉 [@alienexplorer](https://youtube.com/@alienexplorer)
 
 ---
 
-## 🧠 Créditos y propósito
-
-Creado por [@alienexplorer](https://youtube.com/@alienexplorer)  
-Proyecto educativo y cultural para visibilizar obras de poetisas latinoamericanas.  
-Inspirado en la idea de construir APIs con propósito y sensibilidad artística ✨
+## 🧠 Credits and Purpose
+Created by [@alienexplorer](https://youtube.com/@alienexplorer)  
+Educational and cultural project to showcase works by Latin American women poets.  
+Inspired by the idea of building APIs with purpose and artistic sensitivity ✨
 
 ---
 
-## 📜 Licencia
-
-Este proyecto se comparte con fines educativos y no comerciales.  
-Todos los poemas son de dominio público o se citan con fines pedagógicos.
+## 📜 License
+This project is shared for educational and non-commercial purposes.  
+All poems are in the public domain or cited for educational purposes.
